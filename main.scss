@@ -1,0 +1,56 @@
+body {
+    margin:0;
+    overflow: hidden;
+    background: #1e2024;
+  }
+  
+  $size: 100px;
+  $background: #95a8a6;
+  $foreground: #0f1515;
+  
+  button {
+      width: $size;
+      height: $size;
+      border-radius: 50%;
+      background-color: $background;
+      border: 5px solid $foreground;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      cursor: pointer;
+      transform: translate(-50%, -50%) scale(1);
+      transition: transform 0.35s ease;
+      transform-origin: 50% 50%;
+      
+      &:before {
+          position: absolute;
+          content: "";
+          width: 0px;
+          height: 0px;
+          border-top: 20px solid transparent;
+          border-bottom: 20px solid transparent;
+          border-left: 30px solid $foreground;
+          left: 50%;
+          top: 50%;
+          transform: translate(-30%, -50%);
+      }
+      
+      &:hover {
+          transform: translate(-50%, -50%) scale(1.1);
+      }
+  }
+  
+  .lady {
+    position: absolute;
+    margin:auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    width:525px;
+    opacity:0.4;
+  } 
+  
+  canvas {
+    opacity:0;
+  }
